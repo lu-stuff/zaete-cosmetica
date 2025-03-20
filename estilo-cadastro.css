@@ -1,0 +1,119 @@
+/* Importação da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuração do corpo */
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #FAF8F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container do formulário */
+.cadastro-container {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: left;
+}
+
+/* Título */
+.cadastro-container h2 {
+    color: #984C56;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Campos de input */
+label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #984C56;
+}
+
+/* Grupo de inputs (Estado, Cidade, Número) */
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group div {
+    flex: 1;
+}
+
+/* Botão */
+input[type="submit"] {
+    background-color: #984C56;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 14px;
+    font-size: 17px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #7b2b3c;
+}
+
+/* Link de login */
+.cadastro-container p {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+}
+
+.cadastro-container p a {
+    color: #984C56;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cadastro-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    .cadastro-container {
+        padding: 30px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+}

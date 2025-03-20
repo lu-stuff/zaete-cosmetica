@@ -1,0 +1,268 @@
+<!-- Lembrete: indexar as cores no photoshop, reduzir o PPI pra 71 e em último caso a resolução -->
+<!-- <div> é o segredo para diagramar o site, separando por id e class (condições que aparecem em vários lugares diferentes) -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaetê Cosmética</title>
+
+    <link rel="stylesheet" href="estilo.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="logo-topo">
+                    <a href="index.html">
+                        <img src="Imagens/logo-branco-transparente.png" alt="Logo">
+                        </a>
+                </div>
+        
+                <!-- Links do Menu -->
+                <div class="menu">
+                    <div class="dropdown">
+                        <a href="#" id="categorias-toggle">Categorias ▼</a>
+                        <ul class="submenu" id="submenu">
+                            <li><a href="#">Cabelos</a></li>
+                            <li><a href="#">Mãos & Pés</a></li>
+                            <li><a href="#">Perfumes</a></li>
+                            <li><a href="#">Corporal</a></li>
+                        </ul>
+                    </div>
+                    <a href="#promocoes">Promoções</a>
+                    <a href="#ultimos-lancamentos">Lançamentos</a>
+                    <a href="#kits-presente">Presentes</a>
+                    <a href="tabela.html" target="_blank">Nossa Missão</a>
+                </div>
+        
+                <!-- Barra de Pesquisa -->
+                <div class="search-container">
+                    <input type="text" class="search-bar" placeholder="Buscar produtos">
+                    <button class="search-button">
+                        <img src="Imagens/Lupa.png" alt="Buscar">
+                    </button>
+                </div>
+        
+                <!-- Ícones -->
+                <div class="icons">
+                    <a href="cadastro.html" target="_blank">
+                        <img src="Imagens/Perfil.png" alt="Perfil">
+                    </a>
+                    <a href="#">
+                        <img src="Imagens/Sacola.png" alt="Sacola">
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+
+    <section class="video-container">
+        <video autoplay loop muted>
+            <source src="Vídeo/Mika (online-video-cutter.com).mp4" type="video/mp4">
+        </video>
+        <div class="texto-mika">
+            <h1>Conheça a linha MIKA</h1>
+            <p>Ilumine e perfume sua pele e cabelo com o brilho que ela merece.</p>
+            <a href="galeria.html" target="_blank" class="botao-confira">Confira</a>
+        </div>
+    </section>
+
+    <section id="novidade">
+        <div class="novidade-container">
+            <div class="novidade-texto">
+                <h2>Novidade</h2>
+                <p>Descubra as novas fragrâncias vibrantes: Frutas Vermelhas e Guaraná. Perfumes que capturam a essência da brasilidade.</p>
+                <a href="#" class="botao-novidade">Confira →</a>
+            </div>
+            <div class="novidade-imagem">
+                <img id="imagem-novidade" src="Produtos/Novidade/Frasco Frutas Vermelhas (sem fundo).png" alt="Perfume Frutas Vermelhas">
+            </div>
+        </div>
+    </section>    
+    
+    <!-- <div id="novidades">
+        <div class="conteudo">
+            <div class="texto">
+                <h1>Novidade</h1>
+                <p>
+                    Descubra as novas fragrâncias que conectam você com à brasilidade 
+                    <br>
+                    do nosso Guaraná e a doçura envolvente das Frutas Vermelhas. 
+                </p>
+                <a href="#" class="botao">Compre agora</a>
+            </div>
+            <div class="frutas-vermelhas-direita">
+                <img src="Imagens/Frutas Vermelhas.png" alt="Frutas Vermelhas" width="400px">
+            </div>
+        </div>
+    </div> -->
+
+    <section id="promocoes">
+        <h2>Confira nossas promoções</h2>
+        <div class="grid-produtos">
+            <div class="produto">
+                <span class="desconto">-20%</span>
+                <img src="Produtos/castanhas-naturais.jpg" alt="">
+                <p class="categoria">Cabelos</p>
+                <h3>Shampoo Castanhas Naturais 300ML</h3>
+                <p class="preco"><s>R$ 57,50</s> <strong>R$ 46,00</strong></p>
+                <a href="#" class="botao-compra">Compre agora</a>
+            </div>
+            <div class="produto">
+                <span class="desconto">-15%</span>
+                <img src="Produtos/melaleuca-limao.jpg" alt="">
+                <p class="categoria">Mãos & Pés</p>
+                <h3>Sérum para as mãos Melaleuca Limão 30G</h3>
+                <p class="preco"><s>R$ 100,90</s> <strong>R$ 85,80</strong></p>
+                <a href="#" class="botao-compra">Compre agora</a>
+            </div>
+            <div class="produto">
+                <span class="desconto">-10%</span>
+                <img src="Produtos/nasco-sea.jpg" alt="">
+                <p class="categoria">Perfumes</p>
+                <h3>Eau De Parfum NASCO Sea 100ML</h3>
+                <p class="preco"><s>R$ 261,00</s> <strong>R$ 235,90</strong></p>
+                <a href="#" class="botao-compra">Compre agora</a>
+            </div>
+            <div class="produto">
+                <span class="desconto">-25%</span>
+                <img src="Produtos/oleo-de-cenoura.jpg" alt="">
+                <p class="categoria">Corporal</p>
+                <h3>Creme Hidratante Iluminador mika ouro 200ML</h3>
+                <p class="preco"><s>R$ 79,90</s> <strong>R$ 59,90</strong></p>
+                <a href="#" class="botao-compra">Compre agora</a>
+            </div>
+        </div>
+    </section> 
+
+<section id="ultimos-lancamentos">
+    <h2>Últimos Lançamentos</h2>
+    <div class="lancamentos-container">
+        <div class="lancamento-item">
+            <img src="Produtos/ultimos-lançamentos/mika-ouro.jpg" alt="Mika Ouro">
+            <div class="lancamento-info">
+                <h3>Mika Ouro</h3>
+                <p>Uma fragrância sofisticada com notas marcantes.</p>
+                <a href="#" class="botao-lancamento">Saiba Mais</a>
+            </div>
+        </div>
+        <div class="lancamento-item">
+            <img src="Produtos/ultimos-lançamentos/nasco-shampoo.jpg" alt="Shampoo Nasco">
+            <div class="lancamento-info">
+                <h3>Shampoo Nasco</h3>
+                <p>Nutrição intensa para cabelos saudáveis.</p>
+                <a href="#" class="botao-lancamento">Saiba Mais</a>
+            </div>
+        </div>
+        <div class="lancamento-item">
+            <img src="Produtos/ultimos-lançamentos/fv-espuma-de-banho.jpg" alt="Espuma de Banho">
+            <div class="lancamento-info">
+                <h3>Espuma de Banho</h3>
+                <p>Transforme seu banho em uma experiência sensorial.</p>
+                <a href="#" class="botao-lancamento">Saiba Mais</a>
+            </div>
+        </div>
+        <div class="lancamento-item">
+            <img src="Produtos/ultimos-lançamentos/sérum-pró-age.jpg" alt="Sérum Pró Age">
+            <div class="lancamento-info">
+                <h3>Sérum Pró Age</h3>
+                <p>Hidratação profunda e ação anti-idade.</p>
+                <a href="#" class="botao-lancamento">Saiba Mais</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="kits-presente">
+    <h2>Kits de presente para surpreender</h2>
+    <div class="grid-kits">
+        <div class="kit kit-horizontal">
+            <img src="Produtos/kit-presente/kit-frutas.jpg" alt="Kit Frutas">
+            <div class="info-kit">
+                <h3>Kit Frutas Vermelhas</h3>
+                <p>Uma seleção tropical com fragrâncias naturais irresistíveis.</p>
+                <a href="#" class="botao-confira">Confira</a>
+            </div>
+        </div>
+        <div class="kit">
+            <img src="Produtos/kit-presente/kit-algas.jpg" alt="Kit Algas">
+            <h3>Kit Algas Marinhas</h3>
+            <p>Nutrição e frescor do mar para a pele.</p>
+            <a href="#" class="botao-confira">Confira</a>
+        </div>
+        <div class="kit">
+            <img src="Produtos/kit-presente/kit-castanhas.jpg" alt="Kit Castanhas">
+            <h3>Kit Castanhas</h3>
+            <p>Hidratação intensa com óleos naturais.</p>
+            <a href="#" class="botao-confira">Confira</a>
+        </div>
+        <div class="kit">
+            <img src="Produtos/kit-presente/kit-pró.jpg" alt="Kit Pró">
+            <h3>Kit Pró Age</h3>
+            <p>Um kit profissional para cuidar da pele com eficácia.</p>
+            <a href="#" class="botao-confira">Confira</a>
+        </div>
+    </div>
+</section>
+
+
+    <footer>
+        <div class="footer-container">
+    
+            <!-- Coluna 1: Central de Atendimento + Redes Sociais -->
+            <div class="footer-col">
+                <h3>Central de Atendimento</h3>
+                <p><strong>Telefone:</strong> (22) 2633-1085</p>
+                <p><strong>E-mail:</strong> contato@zaete.com.br</p>
+                <p><strong>Horário:</strong> Seg-Sex, das 8h às 18h.</p>
+    
+                <div class="social-section">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/zaetecosmetica/" target="_blank"><img src="footer/facebook.png" alt="Facebook" width="30px"></a>
+                        <a href="https://www.instagram.com/zaetecosmetica/" target="_blank"><img src="footer/instagram.png" alt="Instagram" width="30px"></a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Coluna 2: Mapa -->
+            <div class="footer-col">
+                <h3>Como Chegar</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.2636988174404!2d-41.887875799999996!3d-22.7555931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9655724fd6b1a7%3A0xb1e6f4911f545d3e!2sR.%20das%20Pedras%2C%20116%20-%20Lot.%20Triangulo%20de%20Buzios%2C%20B%C3%BAzios%20-%20RJ%2C%2028950-000!5e0!3m2!1spt-BR!2sbr!4v1742342977956!5m2!1spt-BR!2sbr"
+                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+    
+            <!-- Coluna 3: Vídeo do YouTube Shorts -->
+            <div class="footer-col">
+                <h3>Conheça Nossa Loja</h3>
+                <iframe 
+                    width="100%" height="250" 
+                    src="https://www.youtube.com/embed/mlQuRMGg0PY?controls=1" 
+                    title="YouTube Shorts"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="footer-luan">
+            <p>&copy; Luan | 2025</p>  
+        </div>        
+        
+    </footer>
+    
+
+<script src="script.js"></script>
+
+</body>
+</html>

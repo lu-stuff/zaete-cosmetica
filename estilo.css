@@ -1,0 +1,837 @@
+/* Estilo da navegação */
+/* Estilização da barra de navegação */
+/* Resetando estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do NAV */
+
+nav {
+    background-color: #984C56;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0; /* Em vez de -80px */
+    z-index: 1000;
+    transition: none; /* Remove a animação */
+}
+
+/* Container principal da NAV */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo-topo img {
+    height: 50px;
+    width: auto; /* Evita esticamento */
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+/* Links do menu */
+.menu a {
+    font-family: Outfit, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #FBF5E9;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    opacity: 0.8;
+}
+
+/* Dropdown (Menu Suspenso) */
+.dropdown {
+    position: relative;
+}
+
+.dropdown .submenu {
+    display: none;
+    position: absolute;
+    background: white;
+    list-style: none;
+    top: 40px;
+    left: 0;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px; /* Aumenta largura do submenu */
+}
+
+/* Itens do submenu */
+.submenu li {
+    padding: 8px 20px;
+    white-space: nowrap; /* Evita quebra de linha */
+}
+
+.submenu li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.submenu li a:hover {
+    color: #984C56;
+}
+
+/* Barra de Pesquisa */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    max-width: 250px;
+}
+
+/* Campo de texto */
+.search-bar {
+    border: none;
+    outline: none;
+    font-family: Outfit, Helvetica, sans-serif;
+    width: 100%;
+    padding: 5px;
+}
+
+/* Botão da lupa */
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.search-button img {
+    width: 18px;
+}
+
+/* Ícones */
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icons img {
+    width: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icons img:hover {
+    opacity: 0.8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* VÍDEO */
+
+.video-container {
+    position: relative;
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 80vh; /* Define uma altura proporcional */
+    overflow: hidden; /* Garante que não haja margem branca */
+}
+
+.video-container video {
+    width: 100%; /* Garante que o vídeo cubra toda a largura */
+    height: 100%;
+    object-fit: cover; /* Ajusta o vídeo sem distorcer */
+}
+
+.texto-mika {
+    position: absolute;
+    top: 50%;
+    left: 5%; /* Mantém alinhado à esquerda */
+    transform: translateY(-50%);
+    color: white;
+    font-family: Outfit, Helvetica, sans-serif;
+    max-width: 400px;
+}
+
+.texto-mika h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.texto-mika p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.botao-confira {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.botao-confira:hover {
+    background: white;
+    color: #984C56;
+}
+
+.botao-confira::after {
+    content: " →";
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+/* FIM DO VÍDEO */
+
+/* NOVIDADES */
+
+
+#novidade {
+    background-color: #fff; /* Fundo branco */
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Impede que o fundo cresça além do necessário */
+}
+
+.novidade-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 50px;
+    min-height: 400px; /* Evita que o fundo se expanda excessivamente */
+}
+
+.novidade-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Mantém a imagem centralizada verticalmente */
+    max-height: 400px; /* Impede o crescimento excessivo do fundo */
+}
+
+.novidade-imagem img {
+    width: 800px; /* Mantém a imagem grande */
+    height: auto;
+    max-height: 100%; /* Mantém a imagem dentro do container */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.novidade-texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: Outfit, Helvetica, sans-serif;
+    max-width: 600px; /* Aumenta a largura da área do texto */
+}
+
+.novidade-texto p {
+    font-size: 20px;
+    color: #333;
+    max-width: 100%; /* Garante que o texto não fique tão restrito */
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+.novidade-texto h2 {
+    font-size: 40px;
+    color: #984C56;
+    margin-bottom: 50px;
+}
+
+
+.botao-novidade {
+    display: inline-flex;
+    align-items: center;
+    background: none;
+    color: #984C56;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #984C56;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-top: 50px;
+}
+
+.botao-novidade:hover {
+    background: #984C56;
+    color: #fff;
+}
+
+/* FIM DAS NOVIDADES */
+
+body {
+    margin: 0px;
+    background-color: rgb(255, 247, 237);
+    padding-top: 80px; /* Ajusta conforme a altura da navbar */
+    
+}
+
+h1 {
+    font-size: 75px;
+    margin-top: 0px;
+    font-family: Outfit, Helvetica, sans-serif;
+}
+
+.logo-topo {
+    /* float: left; */
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* footer {
+    font-family: Outfit, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #FBF5E9;
+    background-color: #984C56;
+    padding: 25px;
+    text-align: center;
+} */
+
+.perfil {
+    text-align: right;
+    float: right;
+    margin-right: 25px;
+    margin-top: 20px;
+}
+
+.sacola {
+    text-align: right;
+    float: right;
+    margin-top: 20px;
+    margin-right: 25px;
+}
+
+.compre-agora {
+    display: inline-block;
+    margin: 10px;
+    vertical-align: middle;
+}
+
+.centro-compre-agora {
+    text-align: center;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 20px; /* Espaço entre o texto e o botão */
+    padding: 12px 24px;
+    background-color: #984c56;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none; /* Remove sublinhado do link */
+    border-radius: 999px; /* Faz o botão ficar totalmente arredondado */
+    transition: 0.3s ease-in-out;
+}
+
+.botao:hover {
+    background-color: #7e3f47; /* Efeito hover (escurece o botão) */
+    transform: scale(1.05); /* Efeito de leve crescimento */
+}
+
+/* CONFIRA NOSSAS PROMOÇÕES */
+
+#promocoes {
+    background-color: #f5f5f5; /* Fundo suave */
+    padding: 60px 20px;
+    text-align: center;
+    font-family: Outfit, Helvetica, sans-serif; /* Define a fonte para toda a seção */
+}
+
+#promocoes h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #984C56;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 20px; /* Espaçamento entre os produtos */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.produto {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    position: relative; /* Necessário para a etiqueta de desconto */
+}
+
+.produto:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 8px;
+    max-height: 250px; /* Evita imagens muito grandes */
+    object-fit: cover;
+}
+
+.categoria {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+/* Preço original riscado */
+.preco {
+    font-size: 20px;
+    font-weight: bold;
+    color: #984c56;
+}
+
+.preco s {
+    font-size: 16px;
+    color: #888;
+    text-decoration: line-through;
+    margin-right: 8px;
+}
+
+/* Etiqueta de desconto */
+.desconto {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #984c56;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+/* Botão "Compre Agora" apenas com traçado */
+.botao-compra {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #984c56; /* Cor da borda e do texto */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #984c56; /* Borda vermelha */
+    border-radius: 50px;
+    background-color: transparent; /* Fundo transparente */
+    transition: all 0.3s ease-in-out;
+}
+
+.botao-compra:hover {
+    background-color: #984c56; /* Fica colorido ao passar o mouse */
+    color: white; /* Texto branco no hover */
+    transform: scale(1.05);
+}
+
+/* Kits presente */
+
+#kits-presente {
+    background-color: #984C56;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: Outfit, Helvetica, sans-serif;
+}
+
+#kits-presente h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color:rgb(255, 247, 237);
+}
+
+/* Ajusta o layout para uma única linha */
+.grid-kits {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kit {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    flex: 1; /* Garante que os kits fiquem na mesma linha */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.kit-horizontal {
+    flex: 2; /* O Kit Frutas ocupa o dobro do espaço */
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.kit-horizontal img {
+    width: 50%;
+    border-radius: 8px;
+}
+
+.info-kit {
+    padding: 20px;
+}
+
+.kit img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.kit h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.kit p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Botão apenas com traçado */
+.botao-confira {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #984C56;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #984C56;
+    border-radius: 50px;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.botao-confira:hover {
+    background-color: #984C56;
+    color: white;
+    transform: scale(1.05);
+}
+
+.kit img {
+    width: 100%;
+    height: 300px; /* Define uma altura fixa para alinhar todas as imagens */
+    object-fit: cover; /* Garante que a imagem se ajuste sem distorção */
+    border-radius: 8px;
+}
+
+/* ÚLTIMOS LANÇAMENTOS */
+
+#ultimos-lancamentos {
+    background-color: #FBF5E9; /* Fundo neutro */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#ultimos-lancamentos h2 {
+    font-size: 36px;
+    color: #984C56;
+    margin-bottom: 40px;
+    font-family: Outfit, Helvetica, sans-serif;
+}
+
+.lancamentos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.lancamento-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 260px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.lancamento-item:hover {
+    transform: translateY(-5px);
+}
+
+.lancamento-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.lancamento-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.lancamento-info h3 {
+    font-size: 18px;
+    color: #984C56;
+    margin-bottom: 5px;
+    font-family: Outfit, Helvetica, sans-serif;
+}
+
+.lancamento-info p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: Outfit, Helvetica, sans-serif;
+}
+
+.botao-lancamento {
+    display: inline-block;
+    background-color: #984C56;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-family: Outfit, Helvetica, sans-serif;
+}
+
+.botao-lancamento:hover {
+    background-color: #7d3d45;
+}
+
+
+/* FOOTER */
+
+/* Estilos do Footer */
+
+footer {
+    background-color: #FAF8F6;
+    padding: 40px 0;
+    font-family: Outfit, Helvetica, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-col h3 {
+    font-size: 18px;
+    color: #984C56;
+    margin-bottom: 10px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.social-section {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.footer-luan {
+    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Garante que ocupa toda a largura do footer */
+}
+
+
+/* GALERIA */
+#galeria-mika h2 {
+    margin-bottom: 30px; /* Ajuste conforme necessário */
+}
+
+#galeria-mika {
+    display: block; /* Garante que não seja afetado por flex/grid */
+    color: #984C56;
+    font-family: Outfit, Helvetica, sans-serif;
+    font-size: 22px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.produto {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* NOVO HOVER */
+.descricao {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s, transform 0.3s;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.descricao h3 {
+    color: #984C56;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.produto:hover .descricao {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+/* TABELA */
+
+.tabela-missao-container {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+    font-family: Outfit, Helvetica, sans-serif;
+}
+
+.tabela-missao-container h2 {
+    font-size: 32px;
+    color: #984C56;
+    margin-bottom: 20px;
+}
+
+.tabela-missao {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tabela-missao th, .tabela-missao td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabela-missao th {
+    background-color: #984C56;
+    color: white;
+    font-size: 18px;
+}
+
+.tabela-missao td {
+    font-size: 16px;
+    color: #333;
+}
+
+.tabela-missao tr:last-child td {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .tabela-missao th, .tabela-missao td {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
