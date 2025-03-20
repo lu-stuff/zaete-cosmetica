@@ -293,7 +293,7 @@ nav {
 
 body {
     margin: 0px;
-    background-color: rgb(255, 247, 237);
+    background-color: #fff7ed;
     padding-top: 80px; /* Ajusta conforme a altura da navbar */
     
 }
@@ -647,7 +647,7 @@ h3 {
 
 /* Estilos do Footer */
 
-footer {
+.footer-index {
     background-color: #FAF8F6;
     padding: 40px 0;
     font-family: Outfit, Helvetica, sans-serif;
@@ -711,10 +711,34 @@ footer {
     width: 100%; /* Garante que ocupa toda a largura do footer */
 }
 
+.footer-luan-galeria {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Garante que ocupa toda a largura do footer */
+    background-color: #fff7ed;
+    padding: 40px 0;
+    font-family: Outfit, Helvetica, sans-serif;
+}
+
+.footer-luan-tabela {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Garante que ocupa toda a largura do footer */
+    background-color: #fff7ed;
+    padding: 40px 0;
+    font-family: Outfit, Helvetica, sans-serif;
+}
+
 
 /* GALERIA */
 #galeria-mika h2 {
-    margin-bottom: 30px; /* Ajuste conforme necessário */
+    margin-bottom: 20px; /* Ajuste conforme necessário */
 }
 
 #galeria-mika {
