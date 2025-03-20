@@ -707,7 +707,7 @@ h3 {
 }
 
 .footer-luan {
-    text-align: center; /* Centraliza o texto */
+    text-align: center;
     width: 100%; /* Garante que ocupa toda a largura do footer */
 }
 
@@ -716,7 +716,6 @@ h3 {
     bottom: 0;
     left: 0;
     text-align: center;
-    text-align: center; /* Centraliza o texto */
     width: 100%; /* Garante que ocupa toda a largura do footer */
     background-color: #fff7ed;
     padding: 40px 0;
@@ -728,7 +727,6 @@ h3 {
     bottom: 0;
     left: 0;
     text-align: center;
-    text-align: center; /* Centraliza o texto */
     width: 100%; /* Garante que ocupa toda a largura do footer */
     background-color: #fff7ed;
     padding: 40px 0;
